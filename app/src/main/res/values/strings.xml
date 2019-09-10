@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TiendaGeek</string>
+    <string name="lbl_email">Email</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_account_create">Crear Cuenta</string>
+    <string name="lbl_password_repeat">Repetir Password</string>
+    <string name="lbl_signin">Ya tienes una cuenta</string>
+    <string name="lbl_signIn">Ingresar</string>
+    <string name="lbl_signUp">Crear una Cuenta</string>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "650878348908",
+    "firebase_url": "https://tiendageek-d09be.firebaseio.com",
+    "project_id": "tiendageek-d09be",
+    "storage_bucket": "tiendageek-d09be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650878348908:android:be035a0dec75d3528c7249",
+        "android_client_info": {
+          "package_name": "co.devhack.tiendageek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650878348908-7ctm2ikoehc04civapaa48gpaoai296q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.devhack.tiendageek",
+            "certificate_hash": "f59176a21a9d42e95849cdae8cac2e25814984fd"
+          }
+        },
+        {
+          "client_id": "650878348908-4i4vl1kj6vic0ttsm58u6srne56jnnq6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD64qKP0uv8JDNOmrER1RiEVkFKgH9QQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650878348908-4i4vl1kj6vic0ttsm58u6srne56jnnq6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
