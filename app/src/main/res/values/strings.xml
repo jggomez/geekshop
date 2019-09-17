@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TiendaGeek</string>
+    <string name="app_name">Geek Store</string>
     <string name="lbl_email">Email</string>
     <string name="lbl_password">Password</string>
     <string name="lbl_account_create">Crear Cuenta</string>
@@ -18,4 +18,13 @@
     <string name="lbl_error_auth_facebook">Tenemos un problema al realizar la autenticación de facebook</string>
     <string name="facebook_app_id">385409258790992</string>
     <string name="fb_login_protocol_scheme">fb385409258790992</string>
+    <string name="lbl_buy">COMPRA O VENDE PRODUCTOS GEEK</string>
+    <string name="lbl_new_products">Productos Recien Publicados</string>
+    <string name="lbl_others_products">Otros Productos</string>
+    <string name="lbl_sell_product">VENDE UN PRODUCTO</string>
+    <string name="lbl_product_name">Nombre</string>
+    <string name="lbl_product_count">Cantidad</string>
+    <string name="lbl_price">Precio (USD)</string>
+    <string name="lbl_description">Descripción</string>
+    <string name="lbl_save_product">Enviar</string>
 </resources>

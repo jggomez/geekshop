@@ -35,6 +35,7 @@ dependencies {
     // Firebase
     implementation 'com.google.firebase:firebase-core:17.2.0'
     implementation 'com.google.firebase:firebase-auth:19.0.0'
+    implementation 'com.google.firebase:firebase-firestore:21.1.1'
 
     // ktx
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha04'
@@ -51,6 +52,9 @@ dependencies {
 
     // Material Dialogs
     implementation 'com.afollestad.material-dialogs:core:3.1.0'
+
+    // RecyclerView
+    implementation 'com.afollestad:recyclical:1.1.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
