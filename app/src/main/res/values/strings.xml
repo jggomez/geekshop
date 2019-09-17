@@ -7,4 +7,15 @@
     <string name="lbl_signin">Ya tienes una cuenta</string>
     <string name="lbl_signIn">Ingresar</string>
     <string name="lbl_signUp">Crear una Cuenta</string>
+    <string name="account_created">Cuenta Creada Correctamente</string>
+    <string name="lbl_network_connection">Problemas de Red</string>
+    <string name="lbl_email_pass_mandatory">El email y password son obligatorios</string>
+    <string name="sigin_correct">Iniciaste Sesión Correctamente</string>
+    <string name="lbl_password_incorrecto">La confirmación del password no es la misma</string>
+    <string name="lbl_processing">Procesando</string>
+    <string name="lbl_processing_description">Estamos procesando tu solicitud</string>
+    <string name="web_client_id">650878348908-4i4vl1kj6vic0ttsm58u6srne56jnnq6.apps.googleusercontent.com</string>
+    <string name="lbl_error_auth_facebook">Tenemos un problema al realizar la autenticación de facebook</string>
+    <string name="facebook_app_id">385409258790992</string>
+    <string name="fb_login_protocol_scheme">fb385409258790992</string>
 </resources>
