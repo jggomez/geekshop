@@ -12,9 +12,13 @@ import co.devhack.tiendageek.util.NetworkHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class PoductsViewModel(app: Application) : AndroidViewModel(app) {
+class ProductsViewModel(app: Application) : AndroidViewModel(app) {
 
     val products: MutableLiveData<List<Product>> by lazy {
+        MutableLiveData<List<Product>>()
+    }
+
+    val lastProducts: MutableLiveData<List<Product>> by lazy {
         MutableLiveData<List<Product>>()
     }
 
@@ -48,6 +52,29 @@ class PoductsViewModel(app: Application) : AndroidViewModel(app) {
             val resp = productRepository.getAll()
             viewModelScope.launch {
                 resp.either(::handleFailure, ::handleProducts)
+            }
+        }
+    }
+
+    fun getLastProducts() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val query = productRepository.getLastProducts()
+            viewModelScope.launch {
+                query.either(::handleFailure) { query ->
+
+                    query.addSnapshotListener { querySnapshot, exception ->
+                        exception?.let {
+                            handleFailure(
+                                Failure.ServerError(Exception(it.message))
+                            )
+                        }
+
+                        if (querySnapshot?.isEmpty == false) {
+                            val lstProducts = querySnapshot.toObjects(Product::class.java)
+                            lastProducts.value = lstProducts
+                        }
+                    }
+                }
             }
         }
     }

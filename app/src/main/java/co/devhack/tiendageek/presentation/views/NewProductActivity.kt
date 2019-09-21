@@ -5,15 +5,17 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import co.devhack.tiendageek.R
 import co.devhack.tiendageek.data.entities.Product
-import co.devhack.tiendageek.presentation.viewmodel.PoductsViewModel
+import co.devhack.tiendageek.presentation.viewmodel.ProductsViewModel
 import co.devhack.tiendageek.util.BaseActivity
 import co.devhack.tiendageek.util.Failure
 import co.devhack.tiendageek.util.notify
 import kotlinx.android.synthetic.main.activity_new_product.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class NewProductActivity : BaseActivity() {
 
-    private lateinit var productsViewModel: PoductsViewModel
+    private lateinit var productsViewModel: ProductsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +23,7 @@ class NewProductActivity : BaseActivity() {
 
         productsViewModel = ViewModelProviders.of(
             this@NewProductActivity
-        ).get(PoductsViewModel::class.java)
+        ).get(ProductsViewModel::class.java)
 
         btnSaveProduct.setOnClickListener {
             saveProduct()
@@ -53,12 +55,16 @@ class NewProductActivity : BaseActivity() {
 
         showProgress()
 
+        val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
+
         productsViewModel.insertProduct(
             Product(
                 name = nameProduct,
                 quantity = quantityProduct.toInt(),
                 price = priceProduct.toDouble(),
-                description = descriptionProduct
+                description = descriptionProduct,
+                date = format.format(Date()),
+                active = true
             )
         )
     }

@@ -1,7 +1,6 @@
 package co.devhack.tiendageek.data.entities
 
 import android.net.Uri
-import com.google.firebase.firestore.FieldValue
 
 data class User(
     val uid: String,
@@ -16,5 +15,6 @@ data class Product(
     val quantity: Int = 0,
     val price: Double = 0.0,
     val description: String = "",
-    var date: String = ""
+    val date: String = "",
+    val active: Boolean = true
 )
