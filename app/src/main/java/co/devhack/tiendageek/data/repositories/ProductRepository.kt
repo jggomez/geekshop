@@ -82,8 +82,9 @@ class ProductRepository(
                     val task = FirebaseFirestore
                         .getInstance()
                         .collection("products")
-                        .orderBy("date")
+                        .orderBy("date", Query.Direction.DESCENDING)
                         .whereEqualTo("active", true)
+                        .limit(5)
 
                     continuation.resume(
                         Either.Right(task)
